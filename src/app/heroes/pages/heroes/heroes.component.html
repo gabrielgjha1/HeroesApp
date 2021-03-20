@@ -1,0 +1,35 @@
+
+<section *ngIf="!heroe" >
+<div>
+  <mat-spinner></mat-spinner>
+
+</div>
+
+</section>
+
+<div class="informacion" *ngIf="heroe">
+
+
+  <div>
+
+    <h1>{{heroe.superhero}} <small>- {{heroe.alter_ego}}</small> </h1>
+    <hr>
+    <img [src]="heroe | imagen" alt="" style="width: 100%;" srcset="">
+  </div>
+
+  <div>
+
+    <h1>{{heroe.publisher}}</h1>
+    <hr>
+    <mat-list>
+      <mat-list-item>{{heroe.first_appearance}}</mat-list-item>
+      <mat-list-item>{{heroe.characters}}</mat-list-item>
+      <mat-list-item>{{heroe.publisher}}</mat-list-item>
+      <mat-list-item>{{heroe.alter_ego}}</mat-list-item>
+
+    </mat-list>
+    <button mat-button color="warn" (click)="regresar()">Regresar</button>
+  </div>
+
+
+</div>

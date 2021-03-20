@@ -1,0 +1,49 @@
+
+section{
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+section div {
+
+  width: 30%;
+  margin-bottom: 15px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+
+  section div {
+
+    width: 45%;
+    margin-bottom: 15px;
+  }
+
+
+}
+
+@media only screen and (min-width: 992px) {
+
+
+  section div {
+
+    width: 23%;
+    margin-bottom: 15px;
+  }
+
+
+}
+@media only screen and (max-width: 600px) {
+
+  section div {
+
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+
+}

@@ -1,0 +1,23 @@
+<h2>Listar Heroes</h2>
+<section>
+
+  <div *ngFor="let item of heroes" class="example-card">
+
+    <app-tarjeta-heroes  [item]="item"  ></app-tarjeta-heroes>
+
+  </div>
+
+</section>
+
+
+
+<!--
+<ul>
+
+  <li *ngFor="let item of heroes">
+
+    {{item.superhero}}
+
+  </li>
+
+</ul> -->

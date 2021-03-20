@@ -1,0 +1,66 @@
+<h1>Nuevo Héroe   <small>{{heroe.superhero}}</small>  </h1>
+
+<section>
+
+  <div>
+
+    <article class="mitad">
+
+      <mat-form-field style="margin-right: 5px;" >
+
+        <mat-label >Super Héroe</mat-label>
+        <input  matInput type="text" [(ngModel)]="heroe.superhero" required value="">
+
+      </mat-form-field>
+      <mat-form-field >
+
+        <mat-label>Alter Ego</mat-label>
+        <input matInput type="text" [(ngModel)]="heroe.alter_ego" required value="">
+
+      </mat-form-field>
+
+    </article>
+
+
+
+    <mat-form-field style="width: 100%;">
+
+      <mat-label>Primera Aparición</mat-label>
+      <input matInput type="text" [(ngModel)]="heroe.first_appearance" required value="">
+
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+
+      <mat-label>Personajes</mat-label>
+      <input matInput type="text" [(ngModel)]="heroe.characters" required value="">
+
+    </mat-form-field>
+
+
+
+      <mat-form-field appearance="fill">
+      <mat-label>Creador</mat-label>
+      <mat-select required [(ngModel)]="heroe.publisher" >
+        <mat-option *ngFor="let item of publusher" [value]="item.desc">{{item.id}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+
+      <mat-label>Foto Url</mat-label>
+      <input matInput [(ngModel)]="heroe.alt_img"  type="url" required >
+
+    </mat-form-field>
+
+
+    <button (click)="guardar()" mat-raised-button style="width: 100%;" color="primary" >Guardar</button>
+    <button *ngIf="heroe.id" (click)="eliminar()" mat-raised-button style="width: 100%; margin-top: 15px;" color="warn" >Eliminar</button>
+
+  </div>
+
+  <div>
+    <img [src]="heroe | imagen" style="width: 100%;" alt="">
+  </div>
+
+</section>

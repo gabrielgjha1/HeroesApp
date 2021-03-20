@@ -1,0 +1,36 @@
+section{
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+section div {
+
+
+
+  width: 48%;
+
+
+
+}
+
+img {
+
+  height: 50%;
+
+}
+.mitad {
+  width: 100%;
+  padding: 0px;
+  margin:0px
+}
+
+.mitad mat-form-field{
+
+  width: 49.5%;
+
+}
+
+

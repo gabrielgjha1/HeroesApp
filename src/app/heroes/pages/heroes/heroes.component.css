@@ -1,0 +1,23 @@
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+.informacion{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.informacion div{
+
+  width: 45%;
+
+}
